@@ -10,11 +10,13 @@ function getUserSubjects(userRoll, getUserMarks){
 function getUserMarks(userSubId){
     console.log("getting user marks with subid", userSubId)
 }
-// getUserDetails("123", function(userRoll){
-//     getUserSubjects(userRoll, function(userSubId){
-//         getUserMarks(userSubId)
-//     })
-// });
+getUserDetails("123", function(userRoll){
+    getUserSubjects(userRoll, function(userSubId){
+        getUserMarks(userSubId)
+    })
+});
+
+console.log("testing");
 
 setTimeout(() => {
     console.log("hello")
